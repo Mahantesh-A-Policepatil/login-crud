@@ -26,6 +26,27 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `products`
 --
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `user_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `user_name`, `password`) VALUES
+(1, 'Mahantesh', 'mahantesh_policepatil@yahoo.in', 'mahantesh', 'e5bd7e3bf1802d3f9e0edc83d00fe695'),
+(3, 'rohit', 'rohit@gmail.com', 'rohit', 'e5bd7e3bf1802d3f9e0edc83d00fe695');
 
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE IF NOT EXISTS `products` (
@@ -48,28 +69,6 @@ INSERT INTO `products` (`id`, `name`, `quantity`, `price`, `user_id`) VALUES
 (4, 'Washing Machine', 1, '20000.00', 3);
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `user_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `password` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `user_name`, `password`) VALUES
-(1, 'Mahantesh', 'mahantesh_policepatil@yahoo.in', 'mahantesh', 'e5bd7e3bf1802d3f9e0edc83d00fe695'),
-(3, 'rohit', 'rohit@gmail.com', 'rohit', 'e5bd7e3bf1802d3f9e0edc83d00fe695');
 
 --
 -- Constraints for dumped tables
