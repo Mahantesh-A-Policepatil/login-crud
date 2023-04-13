@@ -63,7 +63,8 @@
 	}
 ?>
 
-<div class="container" style="margin-top:60px;">	
+<div class="container" style="margin-top:60px;">
+	<a href="../login/login.php" class="btn btn-primary">Login</a>	
 	<form id="regiserForm" name="regiserForm" method="post" action="../login/register.php" class="form">
         <h1 class="text-center text-info">Register</h1>
         <div class="form-group">
