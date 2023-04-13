@@ -47,25 +47,27 @@
         }
       } else {
     ?>
-    
-    <div class="container" style="margin-top:100px; background: lightgrey;">
-     <form id="login-form" name="form1" class="form" action="" method="post">
-        <h1 class="text-center text-info">Login</h1>
-        <div class="form-group">
-            <label for="username" class="text-info">Username:</label>
-            <input type="text" name="username" id="username" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="password" class="text-info">Password:</label>
-            <input type="password" name="password" id="password" class="form-control">
-        </div>
-        <div class="form-group">
-            <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-            <a href="register.php">Register</a>
-        </div>       
-    </form>
-
-  </div>
+    <h1 class="text-center text-info" style="margin-top:120px;">Login</h1>
+    <div class="container" style="border: 4px solid black; padding:20px;">
+      <form id="login-form" name="form1" class="form" action="" method="post">
+          
+          <div class="form-group">
+              <label for="username" class="text-info">Username:</label>
+              <input type="text" name="username" id="username" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="password" class="text-info">Password:</label>
+              <input type="password" name="password" id="password" class="form-control">
+          </div>
+          <div class="form-group">
+              <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+              
+          </div>       
+      </form>
+    </div>
+    <span class="text-center text-info" style="color:black; margin-left:700px; margin-top:50px">Not Registered..? 
+      <a href="register.php">Register</a>
+    </span>
   <?php
     }
     include '../layout/footer.php'
