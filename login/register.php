@@ -99,9 +99,11 @@
 		jQuery('#regiserForm').validate({
 		    rules: {
 		        password: {
+		        	required: true,
 		            minlength: 5,
 		        },
 		        confirm_password: {
+		        	required: true,
 		            minlength: 5,
 		            equalTo: "#password"
 		        }
