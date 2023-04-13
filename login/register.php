@@ -63,8 +63,8 @@
 	}
 ?>
 
-<div class="container" style="margin-top:100px;">	
-	<form name="form1" method="post" action="../login/register.php" class="form">
+<div class="container" style="margin-top:60px;">	
+	<form id="regiserForm" name="regiserForm" method="post" action="../login/register.php" class="form">
         <h1 class="text-center text-info">Register</h1>
         <div class="form-group">
             <label for="username" class="text-info">Name:</label>
@@ -80,11 +80,11 @@
         </div>
         <div class="form-group">
             <label for="password" class="text-info">Password:</label>
-            <input type="password" name="password" class="form-control" required>
+            <input type="password" id="password" name="password" class="form-control" required>
         </div>
          <div class="form-group">
             <label for="confirm_password" class="text-info">Confirm Password:</label>
-            <input type="password" name="confirm_password" class="form-control" required>
+            <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
         </div>
         <div class="form-group">
             <input type="submit" name="submit" class="btn btn-info btn-md" value="Add">
@@ -94,5 +94,20 @@
 <?php
   include '../layout/footer.php'
 ?>
+<script type="text/javascript">
+	$(document).ready(function() { 
+		jQuery('#regiserForm').validate({
+		    rules: {
+		        password: {
+		            minlength: 5,
+		        },
+		        confirm_password: {
+		            minlength: 5,
+		            equalTo: "#password"
+		        }
+		    }
+		});
+	});  
+</script>
 </body>
 </html>
