@@ -67,7 +67,7 @@ if(!isset($_SESSION['valid'])) {
             <input type="text" name="quantity" class="form-control" required>
         </div>
          <div class="form-group">
-            <label for="price" class="text-info">Proce:</label>
+            <label for="price" class="text-info">Price:</label>
             <input type="text" name="price" class="form-control" required>
         </div>
         <div class="form-group">
